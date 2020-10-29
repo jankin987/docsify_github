@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <style>
     .sidebar>h1 a {
       font-size: 20px;
@@ -60,6 +62,17 @@
       name: 'Zhongjie Mao\'s Docsify',
       repo: 'https://gitee.com/jankin987/docsify'
     }
+  </script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'd7e30b98a94f0d8cce19',
+      clientSecret: '054510dca3e171f030c0c48a6f7f47df2a63e785',
+      repo: 'docsify_github',
+      owner: 'jankin987',
+      admin: ['jankin987'],
+      id: location.pathname,      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
   </script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
